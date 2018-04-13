@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     sf_client = boto3.client('stepfunctions')
     
     response = sf_client.start_execution(
-        stateMachineArn='arn:aws:states:us-east-1:816004290214:stateMachine:UpdateECSCluster',
+        stateMachineArn='arn:aws:states:us-east-1:xxxx:stateMachine:UpdateECSCluster',
         name='UpdateECSCluster',
         input=json.dumps(image_id)
     )
